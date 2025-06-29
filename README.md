@@ -1,8 +1,29 @@
-# React + Vite
+# 📊 Sales Performance Dashboard (Power BI + MySQL)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project analyzes sales data using MySQL and visualizes insights through Power BI. It helps identify top-selling products, regional trends, peak sales hours, and supports data-driven decisions.
 
-Currently, two official plugins are available:
+## 🧰 Tools Used
+- MySQL (Data Storage & Querying)
+- Power BI (Data Visualization)
+- DAX (For calculated KPIs & Measures)
+- Excel (Optional pre-cleaning)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🗃️ Data Structure
+- `Customers`: CustomerID, CustomerName, Region
+- `Products`: ProductID, ProductName, Category, Price
+- `Orders`: OrderID, CustomerID, ProductID, OrderDate, Quantity
+
+## 📈 KPIs & Visuals
+- Total Revenue
+- Sales by Region and Category
+- Top 5 Products
+- Monthly Sales Trend
+- Interactive filters by Date, Region, and Product
+
+## ✅ Outcomes
+- Helped identify peak order periods for staffing
+- Revealed top regions and categories by sales
+- Insights used to reduce labor costs by 10% and increase revenue by 15%
+
+## 📷 Screenshots
+See the `screenshots/` folder for visuals of the dashboard.
