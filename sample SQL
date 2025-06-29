@@ -1,0 +1,42 @@
+-- Create Customers Table
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    Region VARCHAR(50)
+);
+
+-- Create Products Table
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(10,2)
+);
+
+-- Create Orders Table
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    OrderDate DATE,
+    Quantity INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- Insert Sample Data
+INSERT INTO Customers VALUES
+(1, 'John Doe', 'North'),
+(2, 'Jane Smith', 'South'),
+(3, 'Mike Lee', 'East');
+
+INSERT INTO Products VALUES
+(101, 'Laptop', 'Electronics', 50000),
+(102, 'Chair', 'Furniture', 3000),
+(103, 'Phone', 'Electronics', 20000);
+
+INSERT INTO Orders VALUES
+(1001, 1, 101, '2024-06-01', 2),
+(1002, 2, 102, '2024-06-03', 1),
+(1003, 3, 103, '2024-06-04', 3),
+(1004, 1, 103, '2024-06-10', 1);
